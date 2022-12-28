@@ -1,0 +1,6 @@
+<?xml version="1.0"?>
+<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:module:Magento_Backend:etc/menu.xsd">
+    <menu>
+        <add id="Kemana_Grid::home" title="Customer Interest Listing" module="Kemana_Grid" sortOrder="1000" parent="Magento_Customer::customer" resource="Magento_Customer::customer" action="kemana_grid/index/index"/>
+    </menu>
+</config>

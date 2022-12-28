@@ -1,0 +1,26 @@
+type Query
+{
+    CustomerInterest (
+           cusId: Int @doc(description: "Email Address/Mobile Number")
+    ): CustomerInterestGraphqlOutput @resolver(class: "Kemana\\CustomerInterestGraphQl\\Model\\Resolver\\CustomerInterest") @doc(description:"Custom Module Datapassing")
+}
+type CustomerInterestGraphqlOutput
+{
+    myInterest: String
+}
+type Query
+{
+    CustomerInterestList (
+    cusId: Int @doc(description: "Email Address/Mobile Number")
+    ): CustomerInterestListGraphqlOutput @resolver(class: "Kemana\\CustomerInterestGraphQl\\Model\\Resolver\\CustomerInterestList") @doc(description:"Customer Interest List")
+}
+type CustomerInterestListGraphqlOutput
+{
+    interestList: String
+}
+input CustomerInput {
+    my_interest: String
+}
+type CustomerOutput {
+    my_interest: String
+}

@@ -1,0 +1,21 @@
+<?xml version="1.0" ?>
+<routes xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:module:Magento_Webapi:etc/webapi.xsd">
+    <route url="/V1/customer/interests" method="GET">
+        <service class="Kemana\CustomerInterest\Api\GetCustomerInterestListManagementInterface" method="getGetCustomerInterestList"/>
+        <resources>
+            <resource ref="anonymous"/>
+        </resources>
+    </route>
+    <route url="/V1/customer/interest"  method="GET">
+		<service class="Kemana\CustomerInterest\Api\GetCustomerMyInterestManagementInterface" method="getGetCustomerMyInterest"/>
+		<resources>
+			<resource ref="self"/>
+		</resources>
+	</route>
+    <route url="/V1/customer/register/poll" method="POST">
+        <service class="Kemana\CustomerInterest\Api\CustomerRegistrationManagementInterface" method="postCustomerRegistration"/>
+        <resources>
+            <resource ref="anonymous"/>
+        </resources>
+    </route>
+</routes>
